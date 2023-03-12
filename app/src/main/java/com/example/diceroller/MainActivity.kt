@@ -5,6 +5,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+/*
+* This activity allows user to roll a dice and get a random result on the screen
+ */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +26,12 @@ class MainActivity : AppCompatActivity() {
         val resultTextView: TextView = findViewById(R.id.textView)
         // put the result of converted string to the id resolved by the prev line
         resultTextView.text = diceRoll.toString()
+
+        val dice2 = Dice(6)
+        val diceRoll2 = dice2.roll()
+
+        val resultTextView2: TextView = findViewById(R.id.textView4)
+        resultTextView2.text = diceRoll2.toString()
     }
 }
 
